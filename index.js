@@ -9,6 +9,15 @@ const confirmLength = (value) => {
     return true;
 }
 
+const confirmEmail = (value) => {
+    if (value.length < 1) {
+        return "Please enter at least one character";
+    } else if (!value.includes("@")) {
+        return "Please enter a valid email address"
+    }
+    return true;
+}
+
 const questions = [
     {
         type: "input",
@@ -74,7 +83,7 @@ const questions = [
         type: "input",
         message: "Enter the email address you would like users to use to contact you:",
         name: "email",
-        validate: confirmLength
+        validate: confirmEmail
     },
 ];
 
