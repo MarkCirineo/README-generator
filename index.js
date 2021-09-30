@@ -2,27 +2,37 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown")
 
-// TODO: ADD CHECKS TO MAKE SURE AT LEAST ONE CHARACTER WAS SUBMITTED TO NOT ALLOW EMPTY SUBMITS
+const confirmLength = (value) => {
+    if (value.length < 1) {
+        return "Please enter at least one character";
+    }
+    return true;
+}
+
 const questions = [
     {
         type: "input",
         message: "What is the title of your project:",
-        name: "title"
+        name: "title",
+        validate: confirmLength
     },
     {
         type: "input",
         message: "Enter a brief description of the project:",
-        name: "description"
+        name: "description",
+        validate: confirmLength
     },
     {
         type: "input",
         message: "Explain how users can install your project:",
-        name: "installation"
+        name: "installation",
+        validate: confirmLength
     },
     {
         type: "input",
         message: "Explain how users can use your project:",
-        name: "usage"
+        name: "usage",
+        validate: confirmLength
     },
     {
         type: "list",
@@ -33,32 +43,38 @@ const questions = [
     {
         type: "input",
         message: "Please enter the current year:",
-        name: "year"
+        name: "year",
+        validate: confirmLength
     },
     {
         type: "input",
         message: "Please enter you name for the license:",
-        name: "fullName"
+        name: "fullName",
+        validate: confirmLength
     },
     {
         type: "input",
         message: "Explain how users can contribute to your project:",
-        name: "contributing"
+        name: "contributing",
+        validate: confirmLength
     },
     {
         type: "input",
         message: "Explain the tests used when building this project:",
-        name: "tests"
+        name: "tests",
+        validate: confirmLength
     },
     {
         type: "input",
         message: "Enter your github username:",
-        name: "github"
+        name: "github",
+        validate: confirmLength
     },
     {
         type: "input",
         message: "Enter the email address you would like users to use to contact you:",
-        name: "email"
+        name: "email",
+        validate: confirmLength
     },
 ];
 
