@@ -75,7 +75,7 @@ ${data.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [How To Contribute](#how-to-contibute)
+- [How To Contribute](#how-to-contribute)
 - [Tests](#tests)
 - [Questions](#questions)
 ## Installation
@@ -83,7 +83,7 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## License
-${renderLicenseSection(data.license)}
+${renderLicenseSection(data.license, data.year, data.fullName)}
 ## How to Contribute
 ${data.contributing}
 ## Tests
