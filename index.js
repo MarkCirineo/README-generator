@@ -2,7 +2,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown")
 
-// TODO: Create an array of questions for user input
+// TODO: ADD CHECKS TO MAKE SURE AT LEAST ONE CHARACTER WAS SUBMITTED TO NOT ALLOW EMPTY SUBMITS
 const questions = [
     {
         type: "input",
@@ -47,11 +47,10 @@ function writeToFile(fileName, data) {
     console.log(data)
 }
 
-// TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
-            .then((data) => writeToFile("test", data))
+            .then((data) => writeToFile("./dist/README.md", data))
 }
 
 // Function call to initialize app
