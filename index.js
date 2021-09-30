@@ -57,7 +57,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Please enter you name for the license:",
+        message: "Please enter your name for the license:",
         name: "fullName",
         validate: confirmLength
     },
