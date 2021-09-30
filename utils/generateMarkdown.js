@@ -1,6 +1,14 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+    if (license === "MIT") {
+        return "![MIT license badge](https://img.shields.io/badge/license-MIT-brightgreen)"
+    } else if (license === "Apache") {
+        return "![Apache license badge](https://img.shields.io/badge/license-Apache-brightgreen)"
+    } else if (license === "ISC") {
+        return "![ISC license badge](https://img.shields.io/badge/license-ISC-brightgreen)"
+    }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -27,7 +35,9 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## License
-${data.license}
+This project uses the ${data.license} license.
+
+${renderLicenseBadge(data.license)}
 ## How to Contribute
 ${data.contributing}
 ## Tests
