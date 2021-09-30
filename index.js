@@ -32,6 +32,16 @@ const questions = [
     },
     {
         type: "input",
+        message: "Please enter the current year:",
+        name: "year"
+    },
+    {
+        type: "input",
+        message: "Please enter you name for the license:",
+        name: "fullName"
+    },
+    {
+        type: "input",
         message: "Explain how users can contribute to your project:",
         name: "contributing"
     },
@@ -44,6 +54,16 @@ const questions = [
         type: "input",
         message: "Explain how users ask you questions about the project:",
         name: "questions"
+    },
+    {
+        type: "input",
+        message: "Enter your github username:",
+        name: "github"
+    },
+    {
+        type: "input",
+        message: "Enter the email address you would like users to use to contact you:",
+        name: "email"
     },
 ];
 
